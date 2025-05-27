@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-background: 255 255 255;
+    --color-surface: 241 245 249;
+    --color-text: 15 23 42;
+    --color-primary: 37 99 235;
+    --color-secondary: 71 85 105;
+    --color-danger: 239 68 68;
+  }
+
+  [data-theme='dark'] {
+    --color-background: 15 23 42;
+    --color-surface: 30 41 59;
+    --color-text: 241 245 249;
+    --color-primary: 59 130 246;
+    --color-secondary: 148 163 184;
+    --color-danger: 248 113 113;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 
+           disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none 
+           focus:ring-2 focus:ring-primary/50;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white hover:bg-primary/90;
+  }
+
+  .btn-secondary {
+    @apply bg-surface text-secondary hover:bg-surface/80;
+  }
+
+  .btn-danger {
+    @apply bg-danger text-white hover:bg-danger/90;
+  }
+
+  .input {
+    @apply w-full px-4 py-2 rounded-lg bg-surface border border-surface 
+           focus:outline-none focus:ring-2 focus:ring-primary/50 
+           placeholder:text-secondary/50;
+  }
+
+  .card {
+    @apply bg-surface rounded-xl shadow-sm;
+  }
+
+  .checkbox {
+    @apply w-5 h-5 rounded border-2 border-secondary/30 
+           checked:bg-primary checked:border-primary
+           focus:outline-none focus:ring-2 focus:ring-primary/50;
+  }
+}
+
+@layer utilities {
+  .animate-slide-up {
+    animation: slide-up 0.3s ease-out;
+  }
+
+  @keyframes slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(0.5rem);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .shadow-inner-soft {
+    box-shadow: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+  }
+} 
