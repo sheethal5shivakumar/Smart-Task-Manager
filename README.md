@@ -1,63 +1,91 @@
-# Task Manager with React Hooks
+# 🧠 Smart Task Manager Dashboard
 
-A modern task management application built with React, featuring a Pomodoro timer, drag-and-drop task reordering, and dark mode support.
+A fully responsive React app that helps users manage tasks efficiently using advanced React Hooks and custom features.
 
-## Features
+## 📸 App Screenshot
+<div align="center">
+  <img src="screenshot.png" alt="Smart Task Manager Dashboard" width="100%" />
+</div>
 
-- ✅ Task creation, completion, and deletion
-- 🔄 Drag-and-drop task reordering
-- ⏲️ Pomodoro timer with work/break cycles
-- 📊 Task statistics and progress tracking
-- 🌓 Light/Dark theme support
-- 📱 Responsive design
-- 🔄 Cross-tab synchronization
-- 🔌 Offline support (PWA)
+## 🚀 Live Demo
+[View Deployed App](https://smart-task-manager-virid.vercel.app/)
 
-## Technologies Used
+## 📁 Features
+
+- Add, edit, delete tasks
+- Mark tasks as completed
+- Auto-categorization by keywords (e.g., Work, Urgent)
+- Recurring tasks (daily, weekly, monthly)
+- Voice input for quick task addition
+- Dark/Light theme toggle with system preference detection
+- Drag-and-drop task reordering
+- Modern UI with smooth animations
+- Auto-save to localStorage
+- Progress tracking and task filtering
+- Responsive design for all devices
+
+## ⚙️ React Hooks Used
+
+| Hook            | Use Case 1                              | Use Case 2                            |
+|-----------------|------------------------------------------|----------------------------------------|
+| `useState`      | Store task list                          | Toggle task completion                 |
+| `useEffect`     | Load tasks on mount                      | Sync tasks to localStorage             |
+| `useReducer`    | Manage task list                         | Handle task categories                 |
+| `useRef`        | Focus task input                         | Voice input management                 |
+| `useContext`    | Theme toggle via `ThemeContext`          | Task stats via `TaskStatsContext`      |
+| `useMemo`       | Filtered tasks                           | Task statistics                        |
+| `useCallback`   | Add/remove task handlers                 | Voice input controls                   |
+| `useLayoutEffect`| Scroll to new task                      | Theme transitions                      |
+
+### 🧩 Custom Hooks
+
+- `useLocalStorage`: Persistent state management with localStorage
+- `useVoiceInput`: Voice recognition integration for task input
+- `useTaskCategories`: Auto-categorization of tasks based on content
+
+## 🛠️ Tech Stack
 
 - React 18 with Hooks
 - Tailwind CSS for styling
-- @dnd-kit for drag-and-drop
-- Service Workers for offline functionality
-- Local Storage for data persistence
+- Framer Motion for animations
+- @dnd-kit for drag and drop
+- Web Speech API for voice input
+- Vercel for deployment
+- GitHub for version control
 
-## Getting Started
+## 📦 Installation & Local Setup
 
 1. Clone the repository:
    ```bash
-   git clone [repository-url]
+   git clone https://github.com/sheethal5shivakumar/Smart-Task-Manager.git
    ```
 
-2. Install dependencies:
+2. Navigate to the project directory:
+   ```bash
+   cd Smart-Task-Manager
+   ```
+
+3. Install dependencies:
    ```bash
    npm install
    ```
 
-3. Start the development server:
+4. Start the development server:
    ```bash
    npm start
    ```
 
-4. Build for production:
-   ```bash
-   npm run build
-   ```
+5. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Project Structure
+## 🚀 Deployment
 
-- `/src/components` - React components
-- `/src/context` - React Context providers
-- `/src/hooks` - Custom React hooks
-- `/public` - Static assets and HTML template
+The app is deployed on Vercel. For deploying your own version:
 
-## Contributing
+1. Fork this repository
+2. Create a Vercel account
+3. Connect your GitHub repository to Vercel
+4. Deploy with a single click
 
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+## 📝 License
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details. 
+MIT License - feel free to use this project for learning or as a base for your own task manager! 
